@@ -1,0 +1,353 @@
+:root{
+    --pink:#e84393;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none; border:none;
+    text-decoration: none;
+    /* text-transform: capitalize; */
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+    background-color: white;
+}
+
+#about {
+	background: #FFF;
+	padding: 100px 0;
+}
+#about img {
+	margin-top: 65px;
+}
+
+.home{
+    padding:60px;
+}
+
+.categories{
+    padding: 80px;
+    background-color: white;
+}
+
+.about{
+    padding: 100px;
+    background-color: white;
+}
+
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color:#333;
+    padding:1rem;
+    margin:2rem 0;
+    background:rgba(255, 51, 153,.05);
+}
+
+.heading span{
+    color:var(--pink);
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background:rgb(74 59 178);
+    color:#fff;
+    padding:.9rem 1.5rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.large-button{
+    background-color: transparent;
+    margin-top: 280px;
+    color: rgb(107 84 168);
+    border: 3px solid rgb(107 84 168);
+    /* margin-left: 30px; */
+    display: flex;
+    justify-content: center; /* add to align horizontal */
+    align-items: center; /* add to align vertical */
+    cursor: pointer;
+    background-color: transparent;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    padding: 2px;
+}
+
+.large-button:hover{
+    background-color: rgb(107 84 168);
+    color: white;
+}
+
+.large-button:hover>.lg-bt-text{
+    color: white;
+}
+
+.lg-bt-text{
+    color:rgb(107 84 168);
+    background-color: transparent;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    padding: 10px;
+}
+
+.lg-bt-text:hover{
+    color: white;
+}
+
+.home{
+    display: flex;
+    justify-content: center; /* add to align horizontal */
+    align-items: center; /* add to align vertical */
+    text-align: center;
+    min-height: 100vh;
+    background:url(../../assets/new.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width: 50rem;
+}
+
+.home .content h3{
+    font-size: 4rem;
+    color:#333;
+}
+
+.home .content span{
+    font-size: 2.5rem;
+    color:var(--pink);
+    padding:0.5rem 0;
+    line-height: 1.5;
+}
+
+.home .content p{
+    font-size: 1.5rem;
+    color:rgb(255, 254, 254);
+    padding:1rem 0;
+    line-height: 1.5;
+}
+
+
+.icons-container{
+    background:#eee;
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+
+@media screen and (max-width: 950px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 40px;
+        margin-bottom: 20px;
+        margin-top: 50px;
+      }
+      
+  }
+
+  @media (max-width: 1200px) {
+    .flexBox{
+        display: flex;
+        flex-direction: column!important;
+        width: 100%;
+    }
+    .imageFlex img {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        padding-right: 0px!important;
+        margin-bottom: 10px!important;
+    }
+    .imageFlex{
+        width: 100%;
+    }
+    .hero-section p {
+        color: #fff;
+        line-height: 20px!important;
+        margin: 0;
+        padding: 0;
+        font-size: 12px!important;
+    }
+  }
+
+
+.flexBox{
+    display: flex;
+    flex-direction: row;
+}
+
+.imageFlex{
+    display: flex;
+    align-self: flex-end;
+}
+
+.imageFlex img{
+    display: flex;
+    margin-left: auto;
+    padding-right: 40px;
+}
+
+.textFlex{
+    /* display: flex; */
+    width: 100%;
+}
+
+
+.title{
+    color: rgb(107 84 168);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgb(107, 84, 168);
+  }
+
+  .smallCard:hover .overlay {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    cursor: pointer;
+  }
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 40px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+  }
+
+  @media screen and (max-width: 950px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 40px;
+        margin-bottom: 20px;
+        margin-top: 50px;
+      }
+  }
+
+  @media screen and (max-width: 650px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 40px;
+        margin-bottom: 20px;
+        margin-top: 50px;
+      }
+  }
+
+  hr {
+	display: block;
+	height: 2px;
+	border: 0;
+	margin: 3em 0;
+	padding: 0;
+    background-image: linear-gradient(to right, #ffffff, rgb(107, 84, 168), #ffffff);
+	width: 50%;
+	left: 25%;
+	position: relative;
+	border: none;
+}
+
+.hero-section{
+    background-color: rgb(107, 84, 168);
+    padding:60px 0
+}
+
+.tb {
+    display: table;
+    width: 100%;
+}
+
+.tb-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.hero-section p {
+    color: #fff;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+.textFlex > p {
+    font-size: 15px;
+}
+
+.textFlex > h3 {
+    color: rgb(107, 84, 168);
+    font-size: 20px;
+}
+
+.reservation-btn{
+    background:#000;
+    border-radius:0px;
+    padding:12px 20px;
+    color:#fff;
+}
+.reservation-btn:hover{
+    color:#000;
+    background:#fff;
+}
+
+.section-title{
+    cursor:default;
+    text-align: center;
+}
+
+.smallCard{
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.smallCard img{
+    height: 100%;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.div-pattern{
+    background:url('../../assets/div-pattern.png') top left repeat-x;
+    height:30px;
+    width:100%;
+    display:block;
+}
+
+

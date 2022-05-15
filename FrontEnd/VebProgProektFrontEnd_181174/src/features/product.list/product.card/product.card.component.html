@@ -1,0 +1,19 @@
+<div class="card">
+  <fa-icon *ngIf="!isInFavorites.value" (click)="addorRemoveFromFavorites()" [icon]="heartPlusIcon"></fa-icon>
+  <fa-icon *ngIf="isInFavorites.value" (click)="addorRemoveFromFavorites()" [icon]="heartMinusIcon"></fa-icon>
+  <i class="fa fa-trash" (click)="deleteProduct()" aria-hidden="true"></i>
+  <!-- <i id="heart" class="fa-solid fa-heart-circle-check"></i> -->
+  <!-- <mat-icon class="heart" *ngIf="isInFavorites.value" (click)="addorRemoveFromFavorites()" style="padding-left: 10px;" [ngStyle]="{'color':'rgb(107 84 168)'}">heart_broken</mat-icon> -->
+    <img class="card-img-top" [src]="product?.image" alt="Card image cap">
+    
+    <div class="flexbox">
+      <div class="card-body">
+        <h3 class="card-title">{{product?.title}}</h3>
+        <p class="card-text">{{product?.price}}ден.</p>
+      </div>
+      <div class="card-buttons">
+          <span title="Додадете во кошничка" *ngIf="!isInCart.value" class="cart material-icons-outlined" (click)="addToCart()"  [ngStyle]="{'color':'rgb(107 84 168)'}">add_shopping_cart</span>
+          <span title="Отстранете од кошничка" *ngIf="isInCart.value" class="cart material-icons-outlined" (click)="removeFromCart()"  [ngStyle]="{'color':'rgb(107 84 168)'}">remove_shopping_cart</span>
+      </div>
+    </div>
+</div>
